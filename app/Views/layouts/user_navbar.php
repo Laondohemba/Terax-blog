@@ -12,12 +12,6 @@
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('posts/create') ?>">Create Post</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
       </ul>
       <a href="<?= base_url('logout') ?>" class="btn btn-danger btn-sm me-3">Logout</a>
     </div>

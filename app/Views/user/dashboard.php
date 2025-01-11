@@ -10,7 +10,7 @@
 <?php endif ?>
 
 <div class="container bg-light p-5 my-5">
-    <h3 class="text-center"><?= session()->get('username') ?>'s Posts</h3>
+    <h3 class="text-center"><?= ucwords(session()->get('username')) ?>'s Posts</h3>
 
     <?php use CodeIgniter\I18n\Time; ?>
     <?php if ($posts) : ?>
@@ -33,7 +33,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $post['title'] ?></h5>
                             <img src="<?= base_url($post['image']) ?>" class="card-img-top" alt="<?= $post['title'] ?>">
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Last updated: <?= Time::parse($post['updated_at'])->humanize() ?> </h6>
+                            <h6 class="card-subtitle my-3 text-body-secondary">Updated <?= Time::parse($post['updated_at'])->humanize() ?> </h6>
                             <p class="card-text"><?= word_limiter($post['body'], 20) ?>
                                 <a href="<?= base_url('posts/post/' . $post['id']) ?>" class="text-decoration-none">see more</a>
                             </p>
@@ -72,3 +72,4 @@
 </div>
 
 <?= $this->endSection() ?>
+

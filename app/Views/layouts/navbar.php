@@ -9,15 +9,6 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?= base_url('/') ?>">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
       </ul>
       <a href="<?= base_url('login') ?>" class="btn btn-primary btn-sm me-3">Login</a>
       <a href="<?= base_url('user/create') ?>" class="btn btn-success btn-sm">Sign up</a>

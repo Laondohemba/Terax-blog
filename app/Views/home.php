@@ -21,7 +21,8 @@
                     <div class="card my-2" style="width: 27rem;">
                         <div class="card-body">
                             <h5 class="card-title"><?= $post['title'] ?></h5>
-                            <p class="card-subtitle mb-2 text-body-secondary">Last updated: <?= Time::parse($post['updated_at'])->humanize() ?> </p>
+                            <img src="<?= base_url($post['image']) ?>" class="card-img-top" alt="<?= $post['title'] ?>">
+                            <p class="card-subtitle my-3 text-body-secondary">Updated <?= Time::parse($post['updated_at'])->humanize() ?> </p>
                             <p class="card-text"><?= word_limiter($post['body'], 20) ?>
                                 <a href="<?= base_url('posts/view/' . $post['id']) ?>" class="text-decoration-none">see more</a>
                             </p>
@@ -31,7 +32,7 @@
             <?php endforeach ?>
         </div>
     <?php else : ?>
-        <p class="display-6 my-5">You have no posts yet.</p>
+        <p class="display-6 my-5">No posts available.</p>
     <?php endif ?>
 </div>
 <?= $this->endSection() ?>

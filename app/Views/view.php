@@ -18,7 +18,7 @@
 
         <img src="<?= base_url($post['image']) ?>" alt="<?= $post['title'] ?>" class="img-fluid my-3">
         <h4 class="display-4 text-center"> <?= $post['title'] ?> </h4>
-        <h6 class="card-subtitle my-2 text-body-secondary text-center">Last updated: <?= Time::parse($post['updated_at'])->humanize() ?> </h6>
+        <h6 class="card-subtitle my-2 text-body-secondary text-center">Updated <?= Time::parse($post['updated_at'])->humanize() ?> </h6>
         <p> <?= $post['body'] ?> </p>
 
         <div class="row">
